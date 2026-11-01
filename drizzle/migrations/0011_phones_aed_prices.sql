@@ -1,1 +1,0 @@
-ALTER TABLE public.phones ADD COLUMN cost_price_aed numeric NOT NULL DEFAULT 0, ADD COLUMN sale_price_aed numeric NOT NULL DEFAULT 0;
