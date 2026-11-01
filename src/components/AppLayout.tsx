@@ -100,7 +100,7 @@ export function AppLayout({ children }: { children: ReactNode }) {
             <Store className="size-5" />
           </div>
           <div>
-            <p className="text-base font-bold leading-tight">Rush Store</p>
+            <p className="text-base font-bold leading-tight">GD Store</p>
             <p className="text-xs text-sidebar-foreground/60">منفذ الإدارة</p>
           </div>
         </div>
@@ -147,7 +147,7 @@ export function AppLayout({ children }: { children: ReactNode }) {
             <div className="grid size-8 place-items-center rounded-lg bg-secondary text-primary">
               <Store className="size-4" />
             </div>
-            <span className="font-bold">Rush Store</span>
+            <span className="font-bold">GD Store</span>
           </div>
           <div className="hidden text-sm text-muted-foreground md:block">
             {branch ?? "الفرع الرئيسي"}

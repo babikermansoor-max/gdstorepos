@@ -9,9 +9,9 @@ import { formatDate, formatNumber, formatSDG, PAYMENT_LABELS } from "@/lib/forma
 export const Route = createFileRoute("/_authenticated/dashboard")({
   head: () => ({
     meta: [
-      { title: "لوحة التحكم — Rush Store" },
+      { title: "لوحة التحكم — GD Store" },
       { name: "description", content: "ملخص مبيعات اليوم وطرق الدفع وحركة المتجر." },
-      { property: "og:title", content: "لوحة التحكم — Rush Store" },
+      { property: "og:title", content: "لوحة التحكم — GD Store" },
       { property: "og:description", content: "ملخص مبيعات اليوم وطرق الدفع وحركة المتجر." },
     ],
   }),

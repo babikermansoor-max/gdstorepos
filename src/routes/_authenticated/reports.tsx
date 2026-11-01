@@ -13,9 +13,9 @@ import { fetchAll } from "@/lib/fetchAll";
 export const Route = createFileRoute("/_authenticated/reports")({
   head: () => ({
     meta: [
-      { title: "التقارير — Rush Store" },
+      { title: "التقارير — GD Store" },
       { name: "description", content: "تقارير المبيعات والأرباح وأفضل المنتجات خلال أي فترة زمنية." },
-      { property: "og:title", content: "التقارير — Rush Store" },
+      { property: "og:title", content: "التقارير — GD Store" },
       { property: "og:description", content: "تقارير المبيعات والأرباح وأفضل المنتجات." },
     ],
   }),

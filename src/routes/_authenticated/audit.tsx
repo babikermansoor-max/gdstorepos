@@ -8,9 +8,9 @@ import { useProfile, useSession } from "@/hooks/useSession";
 export const Route = createFileRoute("/_authenticated/audit")({
   head: () => ({
     meta: [
-      { title: "سجل العمليات — Rush Store" },
-      { name: "description", content: "سجل العمليات الحساسة في نظام Rush Store للمالك." },
-      { property: "og:title", content: "سجل العمليات — Rush Store" },
+      { title: "سجل العمليات — GD Store" },
+      { name: "description", content: "سجل العمليات الحساسة في نظام GD Store للمالك." },
+      { property: "og:title", content: "سجل العمليات — GD Store" },
       { property: "og:description", content: "متابعة التعديلات والحذف والصلاحيات." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

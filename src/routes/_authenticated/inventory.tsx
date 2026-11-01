@@ -14,9 +14,9 @@ import { Label } from "@/components/ui/label";
 export const Route = createFileRoute("/_authenticated/inventory")({
   head: () => ({
     meta: [
-      { title: "المخزون والجرد — Rush Store" },
+      { title: "المخزون والجرد — GD Store" },
       { name: "description", content: "جرد المنتجات وتصحيح الكميات في كل فرع مع الأسعار." },
-      { property: "og:title", content: "المخزون والجرد — Rush Store" },
+      { property: "og:title", content: "المخزون والجرد — GD Store" },
       { property: "og:description", content: "جرد المنتجات وتصحيح الكميات في الفروع." },
     ],
   }),

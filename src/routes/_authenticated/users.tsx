@@ -18,9 +18,9 @@ import { setStaffPassword, createStaffAccount, deleteStaffAccount } from "@/lib/
 export const Route = createFileRoute("/_authenticated/users")({
   head: () => ({
     meta: [
-      { title: "الموظفين والفروع — Rush Store" },
+      { title: "الموظفين والفروع — GD Store" },
       { name: "description", content: "إدارة صلاحيات الموظفين وتوزيعهم على فروع المحل." },
-      { property: "og:title", content: "الموظفين والفروع — Rush Store" },
+      { property: "og:title", content: "الموظفين والفروع — GD Store" },
       { property: "og:description", content: "إدارة صلاحيات الموظفين والفروع." },
     ],
   }),

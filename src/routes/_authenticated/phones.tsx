@@ -17,9 +17,9 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 export const Route = createFileRoute("/_authenticated/phones")({
   head: () => ({
     meta: [
-      { title: "الهواتف — Rush Store" },
+      { title: "الهواتف — GD Store" },
       { name: "description", content: "بيع الهواتف الجديدة والمستعملة برقم IMEI مع الاستبدال ودفع الفرق." },
-      { property: "og:title", content: "الهواتف — Rush Store" },
+      { property: "og:title", content: "الهواتف — GD Store" },
       { property: "og:description", content: "مخزون وبيع واستبدال الهواتف الجديدة والمستعملة." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

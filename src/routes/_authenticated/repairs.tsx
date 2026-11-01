@@ -16,9 +16,9 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 export const Route = createFileRoute("/_authenticated/repairs")({
   head: () => ({
     meta: [
-      { title: "الإصلاحات — Rush Store" },
+      { title: "الإصلاحات — GD Store" },
       { name: "description", content: "استلام أجهزة الصيانة ومتابعة حالتها حتى التسليم للعميل." },
-      { property: "og:title", content: "الإصلاحات — Rush Store" },
+      { property: "og:title", content: "الإصلاحات — GD Store" },
       { property: "og:description", content: "متابعة أجهزة الصيانة من الاستلام حتى التسليم." },
     ],
   }),
