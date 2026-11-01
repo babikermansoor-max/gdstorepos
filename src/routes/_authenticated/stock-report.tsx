@@ -18,9 +18,9 @@ import { ExchangeRateDialog, useAedRate, aedToSdg } from "@/components/ExchangeR
 export const Route = createFileRoute("/_authenticated/stock-report")({
   head: () => ({
     meta: [
-      { title: "تقرير المخزن — Rush Store" },
+      { title: "تقرير المخزن — GD Store" },
       { name: "description", content: "تقرير شامل لكميات وقيمة المخزون في كل فرع مع النواقص والأرباح المتوقعة." },
-      { property: "og:title", content: "تقرير المخزن — Rush Store" },
+      { property: "og:title", content: "تقرير المخزن — GD Store" },
       { property: "og:description", content: "قيمة المخزون والنواقص والأرباح المتوقعة لكل فرع." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

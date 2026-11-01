@@ -15,9 +15,9 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 export const Route = createFileRoute("/_authenticated/returns")({
   head: () => ({
     meta: [
-      { title: "المرتجعات — Rush Store" },
+      { title: "المرتجعات — GD Store" },
       { name: "description", content: "تسجيل مرتجعات العملاء وإرجاع الكميات للمخزون تلقائياً." },
-      { property: "og:title", content: "المرتجعات — Rush Store" },
+      { property: "og:title", content: "المرتجعات — GD Store" },
       { property: "og:description", content: "تسجيل مرتجعات العملاء وإرجاع الكميات للمخزون." },
     ],
   }),

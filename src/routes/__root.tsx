@@ -80,7 +80,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Rush Store — نظام إدارة المتجر" },
+      { title: "GD Store — نظام إدارة المتجر" },
       {
         name: "description",
         content: "نظام متكامل لإدارة محلات الهواتف: نقطة بيع، مخزون، مرتجعات، صيانة وتقارير.",

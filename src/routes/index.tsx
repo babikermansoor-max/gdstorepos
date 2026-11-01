@@ -6,13 +6,13 @@ import { useProfile, useSession } from "@/hooks/useSession";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Rush Store — نظام إدارة محلات الهواتف" },
+      { title: "GD Store — نظام إدارة محلات الهواتف" },
       {
         name: "description",
         content:
           "نظام متكامل لإدارة المحل: نقطة بيع سريعة، متابعة المخزون، مرتجعات، صيانة الأجهزة، تقارير وصلاحيات الموظفين.",
       },
-      { property: "og:title", content: "Rush Store — نظام إدارة محلات الهواتف" },
+      { property: "og:title", content: "GD Store — نظام إدارة محلات الهواتف" },
       {
         property: "og:description",
         content: "نقطة بيع، مخزون، مرتجعات، صيانة وتقارير في نظام واحد بالعربية.",
@@ -53,7 +53,7 @@ function Landing() {
             <Store className="size-5" />
           </div>
           <div>
-            <p className="font-bold leading-tight">Rush Store</p>
+            <p className="font-bold leading-tight">GD Store</p>
             <p className="text-xs text-secondary-foreground/60">نظام إدارة المتجر</p>
           </div>
         </div>

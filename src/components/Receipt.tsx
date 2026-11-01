@@ -72,7 +72,7 @@ function ReceiptBody({ data, printMode }: { data: ReceiptData; printMode?: boole
       }
     >
       <div className="text-center">
-        <p className="text-lg font-extrabold">Rush Store</p>
+        <p className="text-lg font-extrabold">GD Store</p>
         <p className="text-xs text-muted-foreground">{data.branch ?? "الفرع الرئيسي"}</p>
       </div>
 
@@ -157,7 +157,7 @@ function ReceiptBody({ data, printMode }: { data: ReceiptData; printMode?: boole
       <div className="mt-2 flex justify-center">
         <img
           src={printMode ? rushLogoPrint.url : rushLogo.url}
-          alt="Rush Store"
+          alt="GD Store"
           className={printMode ? "receipt-logo-print h-14 w-auto object-contain" : "h-14 w-auto rounded-md object-contain"}
         />
       </div>

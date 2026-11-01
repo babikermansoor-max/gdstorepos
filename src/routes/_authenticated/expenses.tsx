@@ -14,9 +14,9 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 export const Route = createFileRoute("/_authenticated/expenses")({
   head: () => ({
     meta: [
-      { title: "المنصرفات — Rush Store" },
+      { title: "المنصرفات — GD Store" },
       { name: "description", content: "تسجيل ومتابعة منصرفات المحل اليومية حسب البند والفرع وطريقة الدفع." },
-      { property: "og:title", content: "المنصرفات — Rush Store" },
+      { property: "og:title", content: "المنصرفات — GD Store" },
       { property: "og:description", content: "قائمة منصرفات المحل مع الإجماليات حسب البند والفترة." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

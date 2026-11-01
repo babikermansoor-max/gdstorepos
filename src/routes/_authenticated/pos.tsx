@@ -15,9 +15,9 @@ import { Input } from "@/components/ui/input";
 export const Route = createFileRoute("/_authenticated/pos")({
   head: () => ({
     meta: [
-      { title: "نقطة البيع — Rush Store" },
+      { title: "نقطة البيع — GD Store" },
       { name: "description", content: "شاشة البيع السريع: مسح الباركود، بحث فوري، سلة، فاتورة رقمية قابلة للطباعة." },
-      { property: "og:title", content: "نقطة البيع — Rush Store" },
+      { property: "og:title", content: "نقطة البيع — GD Store" },
       { property: "og:description", content: "بيع سريع بالباركود مع فاتورة رقمية محفوظة في قاعدة البيانات." },
     ],
   }),

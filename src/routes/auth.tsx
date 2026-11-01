@@ -15,10 +15,10 @@ export const Route = createFileRoute("/auth")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "تسجيل الدخول — Rush Store" },
-      { name: "description", content: "دخول موظفي المتجر إلى نظام Rush Store لإدارة المبيعات والمخزون." },
-      { property: "og:title", content: "تسجيل الدخول — Rush Store" },
-      { property: "og:description", content: "دخول موظفي المتجر إلى نظام إدارة Rush Store." },
+      { title: "تسجيل الدخول — GD Store" },
+      { name: "description", content: "دخول موظفي المتجر إلى نظام GD Store لإدارة المبيعات والمخزون." },
+      { property: "og:title", content: "تسجيل الدخول — GD Store" },
+      { property: "og:description", content: "دخول موظفي المتجر إلى نظام إدارة GD Store." },
       { name: "robots", content: "noindex" },
     ],
   }),
@@ -140,7 +140,7 @@ function AuthPage() {
           <div className="grid size-14 place-items-center rounded-2xl bg-secondary text-primary">
             <Store className="size-7" />
           </div>
-          <h1 className="mt-4 text-2xl font-bold">Rush Store</h1>
+          <h1 className="mt-4 text-2xl font-bold">GD Store</h1>
           <p className="mt-1 text-sm text-muted-foreground">
             {mode === "login" ? "سجّل دخولك لإدارة المتجر" : "أنشئ حساب موظف جديد — يحتاج موافقة المالك"}
           </p>
