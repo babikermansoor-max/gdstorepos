@@ -1,3 +1,4 @@
+import gdLogo from "@/assets/gd-logo.png.asset.json";
 import { Link, useNavigate } from "@tanstack/react-router";
 import { useQueryClient } from "@tanstack/react-query";
 import type { ReactNode } from "react";
@@ -96,8 +97,8 @@ export function AppLayout({ children }: { children: ReactNode }) {
     <div className="flex min-h-screen bg-background">
       <aside className="sticky top-0 hidden h-screen w-64 shrink-0 flex-col bg-sidebar text-sidebar-foreground md:flex">
         <div className="flex items-center gap-3 border-b border-sidebar-border px-5 py-5">
-          <div className="grid size-10 place-items-center rounded-xl bg-sidebar-primary text-sidebar-primary-foreground">
-            <Store className="size-5" />
+          <div className="grid size-11 place-items-center overflow-hidden rounded-xl bg-card p-1">
+            <img src={gdLogo.url} alt="GD Store" className="size-full object-contain" />
           </div>
           <div>
             <p className="text-base font-bold leading-tight">GD Store</p>
