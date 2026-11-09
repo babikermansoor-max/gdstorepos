@@ -5,8 +5,8 @@ import JsBarcode from "jsbarcode";
 import { Button } from "@/components/ui/button";
 import { formatDateTime, formatSDG, PAYMENT_LABELS } from "@/lib/format";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import rushLogo from "@/assets/rush-logo.jpg.asset.json";
-import rushLogoPrint from "@/assets/rush-logo-print.png.asset.json";
+import rushLogo from "@/assets/gd-logo.png.asset.json";
+import rushLogoPrint from "@/assets/gd-logo-print.png.asset.json";
 
 export type ReceiptData = {
   invoiceNo: number | string;

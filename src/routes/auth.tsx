@@ -1,6 +1,7 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { Store } from "lucide-react";
+import gdLogo from "@/assets/gd-logo.png.asset.json";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { useSession } from "@/hooks/useSession";
@@ -137,10 +138,7 @@ function AuthPage() {
     <div className="grid min-h-screen place-items-center bg-secondary px-4 py-10">
       <div className="w-full max-w-md rounded-2xl bg-card p-7 shadow-panel">
         <div className="mb-6 flex flex-col items-center text-center">
-          <div className="grid size-14 place-items-center rounded-2xl bg-secondary text-primary">
-            <Store className="size-7" />
-          </div>
-          <h1 className="mt-4 text-2xl font-bold">GD Store</h1>
+          <img src={gdLogo.url} alt="GD Store" className="h-24 w-auto object-contain" />
           <p className="mt-1 text-sm text-muted-foreground">
             {mode === "login" ? "سجّل دخولك لإدارة المتجر" : "أنشئ حساب موظف جديد — يحتاج موافقة المالك"}
           </p>
