@@ -377,6 +377,14 @@ function StockReport() {
   }, [movement, branch, products, periodReturns]);
 
 
+  const actual = useMemo(() => {
+    const units = productReport.reduce((a, p) => a + p.units, 0);
+    const revenue = productReport.reduce((a, p) => a + p.revenue, 0);
+    const cost = productReport.reduce((a, p) => a + p.cost, 0);
+    const invoices = new Set(productReport.flatMap((p) => [...p.invoices])).size;
+    return { units, revenue, cost, profit: revenue - cost, invoices };
+  }, [productReport]);
+
   // أسعار الشراء والبيع لكل منتج
   const priceOf = (id: string) => {
     const p = (products ?? []).find((x) => x.id === id);
@@ -894,6 +902,14 @@ function StockReport() {
         <Stat label="الربح المتوقع" value={formatSDG(totals.sale - totals.cost)} highlight />
       </div>
 
+      <div className="mb-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
+        <Stat label="فواتير الفترة" value={formatNumber(actual.invoices)} />
+        <Stat label="القطع المباعة فعلياً" value={formatNumber(actual.units)} />
+        <Stat label="إجمالي المبيعات الفعلية" value={formatSDG(actual.revenue)} highlight />
+        <Stat label="تكلفة المباع" value={formatSDG(actual.cost)} />
+        <Stat label="الربح المحقق" value={formatSDG(actual.profit)} highlight />
+      </div>
+
       <div className="mb-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
         <Stat label="أصناف شارفت على النفاد" value={formatNumber(totals.low)} />
         <Stat label="أصناف نفدت" value={formatNumber(totals.out)} />
@@ -997,6 +1013,8 @@ function StockReport() {
             { label: "قيمة التكلفة", value: formatSDG(totalCost), tone: "border-destructive/40 bg-destructive/10 text-destructive" },
             { label: "قيمة البيع", value: formatSDG(totalSale), tone: "border-gold bg-gold-soft text-gold" },
             { label: "الربح المتوقع", value: formatSDG(totalSale - totalCost), tone: "border-success/40 bg-success/10 text-success" },
+            { label: "المبيعات الفعلية", value: formatSDG(filteredCategoryReport.reduce((s, c) => s + c.items.reduce((a, p) => a + p.revenue, 0), 0)), tone: "border-gold bg-gold-soft text-gold" },
+            { label: "الربح المحقق", value: formatSDG(filteredCategoryReport.reduce((s, c) => s + c.items.reduce((a, p) => a + p.revenue - p.cost, 0), 0)), tone: "border-success/40 bg-success/10 text-success" },
             { label: "المرتجعات", value: formatSDG(returnsTotal), tone: "border-destructive/40 bg-destructive/10 text-destructive" },
           ];
 
@@ -1027,12 +1045,14 @@ function StockReport() {
                 <th className="p-3 font-medium">قيمة التكلفة</th>
                 <th className="p-3 font-medium">قيمة البيع</th>
                 <th className="p-3 font-medium">الربح المتوقع</th>
+                <th className="p-3 font-medium">الإيراد المحقق</th>
+                <th className="p-3 font-medium">الربح المحقق</th>
               </tr>
             </thead>
             <tbody>
               {filteredCategoryReport.length === 0 && (
                 <tr>
-                  <td colSpan={9} className="p-8 text-center text-muted-foreground">
+                  <td colSpan={11} className="p-8 text-center text-muted-foreground">
                     لا توجد نتائج في هذه الفترة
                   </td>
                 </tr>
@@ -1044,6 +1064,8 @@ function StockReport() {
                 const stockCost = c.items.reduce((s, p) => s + p.stockCost, 0);
                 const stockSale = c.items.reduce((s, p) => s + p.stockSale, 0);
                 const invoices = new Set(c.items.flatMap((p) => [...p.invoices])).size;
+                const revenue = c.items.reduce((s, p) => s + p.revenue, 0);
+                const soldCost = c.items.reduce((s, p) => s + p.cost, 0);
                 return (
                 <Fragment key={c.name}>
                   <tr
@@ -1063,10 +1085,12 @@ function StockReport() {
                     <td className="p-3 text-muted-foreground">{formatSDG(stockCost)}</td>
                     <td className="p-3 font-bold text-gold">{formatSDG(stockSale)}</td>
                     <td className="p-3 font-bold">{formatSDG(stockSale - stockCost)}</td>
+                    <td className="p-3 font-bold text-gold">{formatSDG(revenue)}</td>
+                    <td className="p-3 font-bold text-success">{formatSDG(revenue - soldCost)}</td>
                   </tr>
                   {expanded && (
                     <tr className="border-b border-border/60">
-                      <td colSpan={9} className="p-3">
+                      <td colSpan={11} className="p-3">
 
                         <div className="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-4">
                           {c.items.map((p) => {
@@ -1104,6 +1128,9 @@ function StockReport() {
                                 </span>
                                 <span className="text-[11px] text-muted-foreground">
                                   الربح المتوقع: {formatSDG(p.stockSale - p.stockCost)}
+                                </span>
+                                <span className="text-[11px] font-semibold text-success">
+                                  الإيراد المحقق: {formatSDG(p.revenue)} — الربح المحقق: {formatSDG(p.revenue - p.cost)}
                                 </span>
 
                               </button>
